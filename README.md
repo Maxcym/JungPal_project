@@ -36,7 +36,7 @@ The database is hosted on Google Cloud, taking advantage of its reliable and sca
 
 ### Microsoft Azure
 
-The front-end, PHP, JavaScript, and CSS components are hosted on Microsoft Azure. Azure's platform-as-a-service (PaaS) offerings allow us to deploy and manage our application with ease, benefiting from its global network of data centers for low latency and high performance.
+The front-end, PHP, JavaScript, and CSS components are hosted on Microsoft Azure. 
 
 Link to the website : https://elderly-companions.azurewebsites.net/html/homepage.html 
 
