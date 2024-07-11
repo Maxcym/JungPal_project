@@ -82,7 +82,7 @@ $ad = $result->fetch_assoc();
     </div>
 </form>
 <script>
-        document.getElementById("getUserIdButton").addEventListener("click", function() {
+        document.addEventListener("DOMContentLoaded", function() {
             fetch('https://elderly-companions.azurewebsites.net/php/get_user_id.php', {
                 method: 'GET',
                 headers: {
