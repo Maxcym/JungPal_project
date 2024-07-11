@@ -2,17 +2,17 @@
 header('Content-Type: application/json');
 include("bdd.php");
 
-if (!isset($_GET['id'])) {
-    echo json_encode(['success' => false, 'message' => 'Ad ID not provided.']);
+if (!isset($_GET['user_id'])) {
+    echo json_encode(['success' => false, 'message' => 'User ID not provided.']);
     exit;
 }
 
-$ad_id = $_GET['id'];
+$user_id = $_GET['user_id'];
 
-// Get an ad from the database depending on the id
+// Get an ad from the database depending on the user_id
 try {
-    $stmt = $conn->prepare("SELECT name, surname, dob, rooms, price, size, deposit, internet, campus_time, party, garden, cleaning FROM users JOIN ads ON users.id = ads.user_id WHERE ads.id = ?");
-    $stmt->bind_param("i", $ad_id);
+    $stmt = $conn->prepare("SELECT name, surname, dob, rooms, price, size, deposit, internet, campus_time, party, garden, cleaning FROM users JOIN ads ON users.id = ads.user_id WHERE users.id = ?");
+    $stmt->bind_param("i", $user_id);
     $stmt->execute();
     $result = $stmt->get_result();
     $ad = $result->fetch_assoc();
@@ -20,7 +20,7 @@ try {
     if ($ad) {
         echo json_encode(['success' => true] + $ad);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Ad not found.']);
+        echo json_encode(['success' => false, 'message' => 'Ad not found for the specified user.']);
     }
     $stmt->close();
 } catch (Exception $e) {
