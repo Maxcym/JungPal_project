@@ -20,7 +20,7 @@
 <?php
 session_start();
 $user_id = $_SESSION['user_id'];
-include("bdd.php");
+include("../php/bdd.php");
 
 $stmt = $conn->prepare("SELECT id FROM ads WHERE ads.user_id = ?");
 $stmt->bind_param("i", $user_id);
@@ -30,7 +30,7 @@ $ad = $result->fetch_assoc();
 ?>
 
 <form id="profileForm" action="../php/submit.php" method="post">
-    <input type="hidden" id="adId" name="ad_id" value="<?php echo $ad['id']; ?>">
+    <input type="hidden" id="adId" name="ad_id" value="">
     <input type="hidden" id="userId" name="user_id" value="<?php echo $user_id; ?>">
     <div id="grid">
         <div id="rectangle_name">
