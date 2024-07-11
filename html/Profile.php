@@ -72,7 +72,7 @@ $ad = $result->fetch_assoc();
         <div id="announce">
             <h4>Your ad</h4>
             <div id="button_ad_container">
-                <a href="add.html?id=<?php echo $ad['id']; ?>"><button class="button_ad" type="button">See your ad</button></a>
+                <a href="add.html"><button class="button_ad" type="button">See your ad</button></a>
                 <button class="button_ad" type="button" id="unlock">Edit ad information</button>
                 <button class="button_ad" type="button" id="submitAd">Create ad</button>
                 <button class="button_ad" type="button" id="deleteAd">Delete your ad</button>
