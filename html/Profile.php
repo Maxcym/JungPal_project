@@ -75,7 +75,7 @@ $ad = $result->fetch_assoc();
                 <button class="button_ad" type="button" id="unlock">Edit ad information</button>
                 <button class="button_ad" type="button" id="submitAd">Create ad</button>
                 <button class="button_ad" type="button" id="deleteAd">Delete your ad</button>
-                <div id="userIdDisplay"></div>
+               
             </div>
         </div>
     </div>
