@@ -11,7 +11,7 @@ $input = file_get_contents('php://input');
 $data = json_decode($input, true);
 
 // Retrieve user_id and ad details from formData
-$user_id = isset($data['user_id']) ? $data['user_id'] : null;
+$user_id = isset($data['user_id']) ? $data['user_id'];
 $party = isset($data['party']) ? $data['party'] : '';
 $garden = isset($data['garden']) ? $data['garden'] : '';
 $cleaning = isset($data['cleaning']) ? $data['cleaning'] : '';

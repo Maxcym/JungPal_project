@@ -30,7 +30,6 @@ $ad = $result->fetch_assoc();
 ?>
 
 <form id="profileForm" action="../php/submit.php" method="post">
-    <input type="hidden" id="adId" name="ad_id" value="">
     <div id="grid">
         <div id="rectangle_name">
             <div id="Container_profil">
