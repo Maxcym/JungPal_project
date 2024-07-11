@@ -5,38 +5,39 @@ include("bdd.php");
 $success = false;
 $message = '';
 
-// Récupération des données POST avec vérification de leur existence
-$ad_id = isset($_POST['ad_id']) ? $_POST['ad_id'] : null;
-$user_id = isset($_POST['user_id']) ? $_POST['user_id'] : null;
-$party = isset($_POST['party']) ? $_POST['party'] : '';
-$garden = isset($_POST['garden']) ? $_POST['garden'] : '';
-$cleaning = isset($_POST['cleaning']) ? $_POST['cleaning'] : '';
-$rooms = isset($_POST['rooms']) ? $_POST['rooms'] : '';
-$price = isset($_POST['price']) ? $_POST['price'] : '';
-$size = isset($_POST['size']) ? $_POST['size'] : '';
-$internet = isset($_POST['internet']) ? $_POST['internet'] : '';
-$deposit = isset($_POST['deposit']) ? $_POST['deposit'] : '';
-$campus_time = isset($_POST['campus_time']) ? $_POST['campus_time'] : '';
+// Retrieve data from POST request
+$input = file_get_contents('php://input');
+$data = json_decode($input, true);
+
+// Check if required fields are present
+$ad_id = isset($data['ad_id']) ? $data['ad_id'] : null;
+$user_id = isset($data['user_id']) ? $data['user_id'] : null;
+$party = isset($data['party']) ? $data['party'] : '';
+$garden = isset($data['garden']) ? $data['garden'] : '';
+$cleaning = isset($data['cleaning']) ? $data['cleaning'] : '';
+$rooms = isset($data['rooms']) ? $data['rooms'] : '';
+$price = isset($data['price']) ? $data['price'] : '';
+$size = isset($data['size']) ? $data['size'] : '';
+$internet = isset($data['internet']) ? $data['internet'] : '';
+$deposit = isset($data['deposit']) ? $data['deposit'] : '';
+$campus_time = isset($data['campus_time']) ? $data['campus_time'] : '';
 
 if ($ad_id && $user_id) {
     // Update existing ad
-    $stmt = $conn->prepare("UPDATE ads SET party=?, garden=?, cleaning=?, rooms=?, price=?, size=?, internet=?, deposit=?, campus_time=? WHERE ad_id=? AND user_id=?");
-    if ($stmt) {
-        $stmt->bind_param("sssssssssis", $party, $garden, $cleaning, $rooms, $price, $size, $internet, $deposit, $campus_time, $ad_id, $user_id);
-        $success = $stmt->execute();
-        $message = $success ? "Ad updated successfully" : "Error updating ad: " . $stmt->error;
-        $stmt->close();
-    } else {
-        $message = "Failed to prepare the SQL statement.";
-    }
-} else {
-    $message = $ad_id ? "User ID is missing." : "Ad ID is missing.";
-}
-
-$conn->close();
-
-echo json_encode([
-    'success' => $success,
-    'message' => $message
-]);
-?>
+    try {
+        $stmt = $conn->prepare("UPDATE ads SET party=?, garden=?, cleaning=?, rooms=?, price=?, size=?, internet=?, deposit=?, campus_time=? WHERE id=? AND user_id=?");
+        if ($stmt) {
+            $stmt->bind_param("ssssssssssi", $party, $garden, $cleaning, $rooms, $price, $size, $internet, $deposit, $campus_time, $ad_id, $user_id);
+            $stmt->execute();
+            if ($stmt->affected_rows > 0) {
+                $success = true;
+                $message = "Ad updated successfully";
+            } else {
+                $message = "No rows were updated. Ad might not exist or user does not have permission.";
+            }
+            $stmt->close();
+        } else {
+            $message = "Failed to prepare the SQL statement.";
+        }
+    } catch (Exception $e) {
+    
