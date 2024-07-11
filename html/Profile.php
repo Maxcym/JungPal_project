@@ -92,7 +92,7 @@ $ad = $result->fetch_assoc();
             .then(data => {
                 if (data.success) {
                     console.log('User ID:', data.user_id); // Print user_id in the console
-                    document.getElementById('userIdDisplay').innerText = 'User ID: ' + data.user_id; // Display user_id on the page
+                   
                 } else {
                     console.error('Error:', data.message);
                     alert('Erreur: ' + data.message);
