@@ -1,4 +1,3 @@
-// If the user logs in succesfully, he is redirect to the right page
 document.getElementById("login").addEventListener("click", function(event) {
     event.preventDefault();
 
@@ -6,9 +5,10 @@ document.getElementById("login").addEventListener("click", function(event) {
 
     ajaxRequest("POST", "https://elderly-companions.azurewebsites.net/php/login.php", formData, function(response) {
         if (response.success) {
+            console.log('User ID:', response.user_id); // Print user_id in the console
+            alert(response.message);
             // Redirect to the home page
             window.location.href = "https://elderly-companions.azurewebsites.net/html/homepage_connected.html";
-            alert(response.message);
         } else {
             // Print the error message
             alert("Erreur: " + response.message);
