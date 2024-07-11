@@ -4,10 +4,10 @@ document.getElementById("login").addEventListener("click", function(event) {
 
     let formData = new FormData(document.querySelector("form"));
 
-    ajaxRequest("POST", "http://localhost/JungPal_project/php/login.php", formData, function(response) {
+    ajaxRequest("POST", "https://elderly-companions.azurewebsites.net/php/login.php", formData, function(response) {
         if (response.success) {
             // Redirect to the home page
-            window.location.href = "http://localhost/JungPal_project/html/homepage_connected.html";
+            window.location.href = "https://elderly-companions.azurewebsites.net/html/homepage_connected.html";
             alert(response.message);
         } else {
             // Print the error message
