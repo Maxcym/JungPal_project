@@ -22,7 +22,7 @@ $internet = isset($data['internet']) ? $data['internet'] : '';
 $deposit = isset($data['deposit']) ? $data['deposit'] : '';
 $campus_time = isset($data['campus_time']) ? $data['campus_time'] : '';
 
-if ($user_id && $ad_id) {
+if ($user_id) {
     // Update existing ad
     $stmt = $conn->prepare("UPDATE ads SET party=?, garden=?, cleaning=?, rooms=?, price=?, size=?, internet=?, deposit=?, campus_time=? WHERE user_id=?");
     if ($stmt) {
