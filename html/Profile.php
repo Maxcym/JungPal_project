@@ -20,9 +20,7 @@
 <?php
 session_start();
 $user_id = $_SESSION['user_id'];
-echo $user_id;
 include("../php/bdd.php");
-
 $stmt = $conn->prepare("SELECT id FROM ads WHERE ads.user_id = ?");
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
