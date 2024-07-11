@@ -30,6 +30,7 @@ document.getElementById('submitAd').addEventListener('click', function() {
 
                     if (response.success) {
                         document.getElementById('adId').value = response.ad_id;
+                        alert('Ad created with success.');
                     }
                 } else {
                     alert('An error occurred while submitting your ad.');
