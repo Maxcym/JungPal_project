@@ -49,6 +49,9 @@ document.getElementById('unlock').addEventListener('click', function() {
                     alert('An error occurred while submitting your ad.');
                 }
             };
+            xhr.onerror = function() {
+                alert('An error occurred while connecting to the server.');
+            };
             xhr.send(formData);
 
         } else {
