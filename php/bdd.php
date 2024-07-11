@@ -7,9 +7,9 @@ error_reporting(E_ALL);
   header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
   // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-  $servername = "localhost";
+  $servername = "34.155.17.154";
   $username = "root";
-  $password = "";
+  $password = "L.h+q2}kUJe#J/Ih";
   $dbname = "jungpal";
 
   // Création de la connexion
