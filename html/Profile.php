@@ -81,6 +81,27 @@ $ad = $result->fetch_assoc();
         </div>
     </div>
 </form>
+<script>
+        document.getElementById("getUserIdButton").addEventListener("click", function() {
+            fetch('https://elderly-companions.azurewebsites.net/php/get_user_id.php', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log('User ID:', data.user_id); // Print user_id in the console
+                    document.getElementById('userIdDisplay').innerText = 'User ID: ' + data.user_id; // Display user_id on the page
+                } else {
+                    console.error('Error:', data.message);
+                    alert('Erreur: ' + data.message);
+                }
+            })
+            .catch(error => console.error('Fetch Error:', error));
+        });
+    </script>
 
 <script src="../js/Photo.js"></script>
 <script src="../js/profile.js"></script>
