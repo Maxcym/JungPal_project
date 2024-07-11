@@ -13,6 +13,7 @@ $internet = $_POST['internet'];
 $deposit = $_POST['deposit'];
 $campus_time = $_POST['campus-time'];
 
+echo $user_id;
 if ($ad_id) {
     // Update existing ad
     $stmt = $conn->prepare("UPDATE ads SET user_id=?, party=?, garden=?, cleaning=?, rooms=?, price=?, size=?, internet=?, deposit=?, campus_time=? WHERE id=?");

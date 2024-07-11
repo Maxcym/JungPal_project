@@ -2,14 +2,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const adId = urlParams.get('id');
 
+    console.log(`URL Parameters: ${urlParams.toString()}`); // Log URL parameters
+    console.log(`Ad ID: ${adId}`); // Log the retrieved ad ID
+
     if (!adId) {
         alert('Ad ID not provided in the URL.');
         return;
     }
 
+    console.log(`Fetching ad with ID: ${adId}`); // Debugging line
+
     fetch(`https://elderly-companions.azurewebsites.net/php/get_ad.php?id=${adId}`)
         .then(response => response.json())
         .then(data => {
+            console.log('Server Response:', data); // Log server response
             if (data.success) {
                 document.getElementById('title').textContent = `Rent a room at ${data.name}'s`;
                 document.getElementById('name').textContent = data.name;

@@ -37,6 +37,36 @@
         </form>
     </div>
 </div>
-<script src="../js/login.js"></script>
+<!-- <script src="../js/login.js"></script> -->
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Gather form data
+        const formData = new FormData(event.target);
+
+        // Convert form data to URL-encoded string
+        const formDataObject = Object.fromEntries(formData.entries());
+        const formDataString = new URLSearchParams(formDataObject).toString();
+
+        // Send the login request using fetch API
+        fetch('https://elderly-companions.azurewebsites.net/php/login.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: formDataString
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('User ID:', data.user_id); // Print user_id in the console
+            } else {
+                console.error('Error:', data.message);
+            }
+        })
+        .catch(error => console.error('Fetch Error:', error));
+    });
+</script>
 </body>
 </html>

@@ -6,6 +6,11 @@ header('Content-Type: application/json'); // Définir l'en-tête de la réponse 
 
 $response = array(); // Initialiser le tableau de réponse
 
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Verify if the account exists and logs in
 if (isset($_POST['email']) && isset($_POST['password'])) {
     // Retrieving form data
@@ -26,7 +31,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $_SESSION['user_id'] = $row['id'];
         $_SESSION['user_name'] = $nom_utilisateur;
         
-        $response = array("success" => true, "message" => "Bienvenue, " . $nom_utilisateur);
+        $response = array("success" => true, "message" => "Bienvenue, " . $nom_utilisateur, "user_id" => $row['id'] );
     } else {
         
         // The login information is incorrect
