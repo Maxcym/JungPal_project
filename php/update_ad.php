@@ -12,7 +12,6 @@ $data = json_decode($input, true);
 
 // Retrieve user_id and ad details from formData
 $user_id = isset($data['user_id']) ? $data['user_id'] : null;
-$ad_id = isset($data['ad_id']) ? $data['ad_id'] : null;
 $party = isset($data['party']) ? $data['party'] : '';
 $garden = isset($data['garden']) ? $data['garden'] : '';
 $cleaning = isset($data['cleaning']) ? $data['cleaning'] : '';
@@ -25,9 +24,9 @@ $campus_time = isset($data['campus_time']) ? $data['campus_time'] : '';
 
 if ($user_id && $ad_id) {
     // Update existing ad
-    $stmt = $conn->prepare("UPDATE ads SET party=?, garden=?, cleaning=?, rooms=?, price=?, size=?, internet=?, deposit=?, campus_time=? WHERE id=? AND user_id=?");
+    $stmt = $conn->prepare("UPDATE ads SET party=?, garden=?, cleaning=?, rooms=?, price=?, size=?, internet=?, deposit=?, campus_time=? WHERE user_id=?");
     if ($stmt) {
-        $stmt->bind_param("ssssssssii", $party, $garden, $cleaning, $rooms, $price, $size, $internet, $deposit, $campus_time, $ad_id, $user_id);
+        $stmt->bind_param("ssssssssii", $party, $garden, $cleaning, $rooms, $price, $size, $internet, $deposit, $campus_time, $user_id);
         $success = $stmt->execute();
         $message = $success ? "Ad updated successfully" : "Error updating ad: " . $stmt->error;
         $stmt->close();
