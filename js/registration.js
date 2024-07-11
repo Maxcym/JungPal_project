@@ -4,9 +4,9 @@ document.getElementById("signup").addEventListener("click", function(event) {
 
     let formData = new FormData(document.getElementById("inscription-form"));
 
-    ajaxRequest("POST", "http://localhost/JungPal_project/php/registration.php", formData, function(response) {
+    ajaxRequest("POST", "https://elderly-companions.azurewebsites.net/php/registration.php", formData, function(response) {
         if (response.success) {
-            window.location.href = "http://localhost/JungPal_project/html/connexion.html";
+            window.location.href = "https://elderly-companions.azurewebsites.net/html/connexion.html";
         } else {
             alert("Erreur: " + response.message); // Display error message
         }
