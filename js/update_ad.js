@@ -21,13 +21,6 @@ document.getElementById('unlock').addEventListener('click', function() {
 
             console.log(`User ID: ${userId}`); // Log the retrieved user ID
 
-            // Check if ad_id is present in formData
-            if (!formData.has('ad_id')) {
-                console.error('ad_id is missing from form data');
-                alert('Ad ID is missing from form data.');
-                return;
-            }
-
             // Add user_id to formData
             formData.append('user_id', userId);
 
@@ -40,7 +33,7 @@ document.getElementById('unlock').addEventListener('click', function() {
                         alert(response.message);
 
                         if (response.success) {
-                            document.getElementById('adId').value = response.ad_id;
+                            // Optionally handle any UI updates or actions on success
                         }
                     } catch (e) {
                         console.error('Invalid JSON response:', xhr.responseText);
