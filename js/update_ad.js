@@ -19,8 +19,6 @@ document.getElementById('unlock').addEventListener('click', function() {
 
                 if (response.success) {
                     document.getElementById('adId').value = response.ad_id;
-                    // document.getElementById('submitAd').textContent = 'Update ad';
-                    // document.getElementById('deleteAd').style.display = 'block';
                 }
             } catch (e) {
                 console.error('Invalid JSON response:', xhr.responseText);
