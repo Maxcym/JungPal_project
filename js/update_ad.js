@@ -1,12 +1,16 @@
-// Get the informations from the form to update the ad
 document.getElementById('unlock').addEventListener('click', function() {
     var formData = new FormData(document.getElementById('profileForm'));
     console.log(...formData.entries()); // Print form data to the console for debugging
 
+    if (!formData.has('ad_id')) {
+        console.error('ad_id is missing from form data');
+        alert('Ad ID is missing from form data.');
+        return;
+    }
     if (!formData.has('user_id')) {
         console.error('user_id is missing from form data');
-    } else {
-        console.log('user_id:', formData.get('user_id'));
+        alert('User ID is missing from form data.');
+        return;
     }
 
     var xhr = new XMLHttpRequest();
@@ -22,7 +26,6 @@ document.getElementById('unlock').addEventListener('click', function() {
                 }
             } catch (e) {
                 console.error('Invalid JSON response:', xhr.responseText);
-
             }
         } else {
             alert('An error occurred while submitting your ad.');
