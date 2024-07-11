@@ -11,7 +11,7 @@ document.getElementById('unlock').addEventListener('click', function() {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Failed to retrieve user ID');
+            throw new Error(`Failed to fetch user ID (${response.status} ${response.statusText})`);
         }
         return response.json();
     })
@@ -48,11 +48,11 @@ document.getElementById('unlock').addEventListener('click', function() {
             xhr.send(formData);
 
         } else {
-            throw new Error('Failed to retrieve user ID');
+            throw new Error('User ID not found in response data');
         }
     })
     .catch(error => {
-        console.error('Error retrieving user ID:', error);
-        alert('Error connecting to the server.');
+        console.error('Error retrieving user ID:', error.message);
+        alert('Failed to retrieve user ID. Please try again later.');
     });
 });
