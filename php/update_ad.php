@@ -6,7 +6,7 @@ $success = false;
 $message = '';
 
 // Récupération des données POST avec vérification de leur existence
-$ad_id = isset($_POST['id']) ? $_POST['id'] : null;
+$ad_id = isset($_POST['ad_id']) ? $_POST['ad_id'] : null;
 $user_id = isset($_POST['user_id']) ? $_POST['user_id'] : null;
 $party = isset($_POST['party']) ? $_POST['party'] : '';
 $garden = isset($_POST['garden']) ? $_POST['garden'] : '';
