@@ -82,7 +82,7 @@ $stmt = $conn->prepare("SELECT id FROM ads WHERE ads.user_id = ?");
     </div>
 </form>
 
-<script src="../js/photo.js"></script>
+<script src="../js/Photo.js"></script>
 <script src="../js/profile.js"></script>
 <script src="../js/ad.js"></script>
 <script src="../js/delete_ad.js"></script>
