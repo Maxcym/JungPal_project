@@ -61,7 +61,7 @@ body {
     padding: 0;
 
 
-    }
+}
 
 #grid
 {
@@ -73,9 +73,9 @@ body {
 }
 
 #imageContainer {
-    width: 70%;
+    width: 75%;
     height: 100%;
-    border-radius: 50%; /* Créer un conteneur rond */
+    border-radius: 50%;
     overflow: hidden;
     border: 2px solid #ccc;
     grid-row-start: 1;
@@ -88,7 +88,7 @@ body {
 #imageContainer img {
     width: 100%;
     height: auto;
-    border-radius: 50%; /* Assurer que l'image est aussi ronde que son conteneur */
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -138,7 +138,7 @@ input[type="file"] {
 }
 
 input[type="file"]::before {
-    content: 'Changer sa photo de profil'; /* Changer le texte de l'input */
+    content: 'Change profile picture';
     color: white;
     display: inline-block;
     background-color: #E18B42;
@@ -172,7 +172,7 @@ input[type="file"]::before {
 }
 
 #button2[type="file"]::before {
-    content: 'Changer la photo'; /* Changer le texte de l'input */
+    content: 'Change photo';
     color: white;
     display: inline-block;
     background-color: #E18B42;
@@ -257,11 +257,13 @@ input[type="file"]::before {
     grid-column-start: 1;
     grid-column-end: 2;
     margin-left: 21%;
+    margin-top: 1%;
 }
 
 #explanation
 {
     margin-left: 12%;
+    margin-top: 1.5%;
 }
 
 #announce h4
@@ -289,7 +291,7 @@ input[type="file"]::before {
     font-size: 16px;
     cursor: pointer;
     font-family: 'Lexend Mega';
-    width: 80%; /* Ajuster la largeur des boutons */
+    width: 80%;
     text-align: center;
 }
 
@@ -305,7 +307,7 @@ input[type="file"]::before {
 #rental_condition
 {
     width: 84%;
-    height: 98%;
+    height: 100%;
     border-radius: 5px;
     background-color: white;
     margin-left: 10%;
@@ -322,7 +324,7 @@ input[type="file"]::before {
 #house_rectangle
 {
     width: 100%;
-    height: 98%;
+    height: 100%;
     border-radius: 5px;
     background-color: white;
     justify-content: center;
@@ -446,7 +448,7 @@ input[type="file"]::before {
     justify-self: center;
     margin-top: 14%;
     margin-left: 5%;
-    }
+}
 
 .button
 {
@@ -459,7 +461,7 @@ input[type="file"]::before {
     font-size: 16px;
     cursor: pointer;
     font-family: 'Lexend Mega';
-    width: 100%; /* Ajuster la largeur des boutons */
+    width: 100%;
     text-align: center;
 
 

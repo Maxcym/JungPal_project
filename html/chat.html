@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Lexend+Mega' rel='stylesheet'>
+  <title>Chat App</title>
+  <link href="../css/chat.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <nav>
+    <a href="homepage_connected.html"><img id="image" src="../Images/Logo.jpeg" alt="Elderly Companions Logo"></a>
+    <h1>Elderly Companions</h1>
+    <a href="homepage_connected.html"><div id="home">Home</div></a>
+  </nav>
+</header>
+<div class="app-container">
+  <div class="sidebar">
+    <h2>Chats</h2>
+    <ul>
+      <li onclick="loadChat('Chat 1')">Chat 1</li>
+      <li onclick="loadChat('Chat 2')">Chat 2</li>
+      <li onclick="loadChat('Chat 3')">Chat 3</li>
+      <!-- Ajoutez plus de chats ici -->
+    </ul>
+  </div>
+  <div class="chat-container" id="chat-container">
+    <div class="chat-box">
+    </div>
+    <div class="input-box">
+    </div>
+  </div>
+</div>
+
+<script src = "../js/chat.js"></script>
+</body>
+</html>
