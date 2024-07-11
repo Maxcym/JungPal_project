@@ -1,14 +1,3 @@
-nav {
-    display: grid;
-    grid-template-rows: 100% ;
-    grid-template-columns: 5% 72% 9% 8% 6%;
-    border-bottom: black solid 1px;
-}
-
-header {
-    background: #FCFEFD;
-}
-
 html, body
 {
     background-color: #FCFEFD;
@@ -18,20 +7,33 @@ html, body
 
 }
 
-#logo {
+nav
+{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 4% 91% 2%;
+    border-bottom: black solid 1px;
+
+}
+
+header {
+    background: #FCFEFD;
+
+}
+
+#image {
     height :100%;
-    width : 100%;
-    padding-left: 17%;
+    width : 95%;
+    padding-left: 10%;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-h1
-{
-    margin-top: 2.6%;
-    margin-left: 1.6%;
+
+h1 {
+    margin-top: 1.5%;
     font-family: 'Lexend Mega';
     grid-row-start: 1;
     grid-row-end: 2;
@@ -39,8 +41,10 @@ h1
     grid-column-end: 3;
 }
 
-#Chatbox {
-    margin-top: 23.5%;
+
+#home
+{
+    margin-top: 80%;
     font-family: 'Lexend Mega';
     font-weight: bold;
     font-size: 15px;
@@ -51,69 +55,12 @@ h1
 }
 
 a:link,
-a:visited {
+a:visited
+{
     text-decoration: none;
     color: black;
 }
 
-#about {
-    margin-top: 27%;
-    font-family: 'Lexend Mega';
-    font-weight: bold;
-    font-size: 15px;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 4;
-    grid-column-end: 5;
-}
-
-#logo_connexion {
-    padding-top: 25%;
-    height: 42%;
-    width: 38%;
-    cursor: pointer;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 5;
-    grid-column-end: 6;
-    padding-left: 10%;
-}
-
-.profile-menu {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 85%;
-    right: 35%;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    min-width: 160px;
-    border-radius: 4px;
-    font-family: 'Lexend Mega';
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.dropdown-menu a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid #ddd;
-}
-
-.dropdown-menu a:hover {
-    background-color: #f1f1f1;
-}
-
-.profile-menu:hover .dropdown-menu {
-    display: block;
-}
 
 /*CSS Page*/
 
