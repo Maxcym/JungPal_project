@@ -5,24 +5,16 @@ include("bdd.php");
 $input = file_get_contents('php://input');
 $data = json_decode($input, true);
 
-session_start();
-if (!isset($_SESSION['user_id'])) {
+// Validate and retrieve user_id from JSON payload
+if (!isset($data['user_id'])) {
     echo json_encode([
         'success' => false,
-        'message' => 'User not logged in.'
+        'message' => 'User ID not provided in the request.'
     ]);
     exit;
 }
 
-$user_id = $_SESSION['user_id'];
-
-if (!$user_id) {
-    echo json_encode([
-        'success' => false,
-        'message' => 'User ID is required.'
-    ]);
-    exit;
-}
+$user_id = $data['user_id'];
 
 // Delete the ad in the database depending on the user who created it
 try {
