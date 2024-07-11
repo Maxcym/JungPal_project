@@ -26,8 +26,6 @@ The platform incorporates both front-end and back-end technologies to provide a 
 
 **Back-end:** 
 
-- **Database and Server:** the platform uses a local database for data storage. This approach provides direct and personalized management of data, ensuring high performance and security.
-
 - **Technologies:** the back-end is built using PHP and JavaScript. PHP is utilized for server-side scripting, allowing us to handle form submissions, manage sessions, and interact with the database. JavaScript is employed for creating dynamic and interactive features that enhance the user experience.
 
 ## Hosting Details
