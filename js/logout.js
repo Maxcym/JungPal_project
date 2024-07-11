@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Logout button clicked");
 
             // Call the php script to logout
-            ajaxRequest("GET", "http://localhost/JungPal_project/php/logout.php", null, function(response) {
+            ajaxRequest("GET", "https://elderly-companions.azurewebsites.net/php/logout.php", null, function(response) {
                 console.log("Logout response: ", response);
                 if (response.success) {
                     console.log("Logout successful, redirecting...");
                     // Redirection vers la page de connexion après la déconnexion
-                    window.location.href = "http://localhost/JungPal_project/html/homepage.html";
+                    window.location.href = "https://elderly-companions.azurewebsites.net/html/homepage.html";
                 } else {
                     console.error("Error during logout.");
                 }

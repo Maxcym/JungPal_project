@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function fetchAds(maxPrice) {
-        fetch(`http://localhost/JungPal_project/php/fetch_ads_price.php?maxPrice=${maxPrice}`)
+        fetch(`https://elderly-companions.azurewebsites.net/php/fetch_ads_price.php?maxPrice=${maxPrice}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

@@ -1,9 +1,9 @@
 // Verify if a user is connected or not
 function checkSession() {
-    ajaxRequest("GET", "http://localhost/JungPal_project/php/check_session.php", null, function(response) {
+    ajaxRequest("GET", "https://elderly-companions.azurewebsites.net/php/check_session.php", null, function(response) {
         if (!response.loggedIn) {
             // Redirect to the connecting page if the user isn't logged in
-            window.location.href = "http://localhost/JungPal_project/html/homepage.html";
+            window.location.href = "https://elderly-companions.azurewebsites.net/html/homepage.html";
         } else {
             // Print the connect user name
             console.log("Connected user : " + response.user_name);

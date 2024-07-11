@@ -1,6 +1,6 @@
 // Show all ads
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('http://localhost/JungPal_project/php/fetch_ads.php')
+    fetch('https://elderly-companions.azurewebsites.net/php/fetch_ads.php')
         .then(response => response.json())
         .then(data => {
             if (data.success) {

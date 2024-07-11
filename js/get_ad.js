@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-    fetch(`http://localhost/JungPal_project/php/get_ad.php?id=${adId}`)
+    fetch(`https://elderly-companions.azurewebsites.net/php/get_ad.php?id=${adId}`)
         .then(response => response.json())
         .then(data => {
             if (data.success) {

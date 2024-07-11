@@ -3,7 +3,7 @@ document.getElementById('deleteAd').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost/JungPal_project/php/delete_ad.php', true);
+    xhr.open('POST', 'https://elderly-companions.azurewebsites.net/php/delete_ad.php', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function () {
         if (xhr.status === 200) {

@@ -1,7 +1,7 @@
 // Get informations from the form to modify user informations in the database
 document.addEventListener("DOMContentLoaded", function() {
     // Print the user informations so they can be changed
-    fetch('http://localhost/JungPal_project/php/profile.php')
+    fetch('https://elderly-companions.azurewebsites.net/php/profile.php')
         .then(response => response.json())
         .then(data => {
             if (data.success) {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         let formData = new FormData(document.getElementById('inscription-form'));
 
-        fetch('http://localhost/JungPal_project/php/update_profile.php', {
+        fetch('https://elderly-companions.azurewebsites.net/php/update_profile.php', {
             method: 'POST',
             body: formData
         })
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (data.success) {
                 alert("Les informations de profil ont été mises à jour avec succès.");
                 document.querySelectorAll('input').forEach(input => input.disabled = true);
-                window.location.href = "http://localhost/JungPal_project/html/Profile.php";
+                window.location.href = "https://elderly-companions.azurewebsites.net/html/Profile.php";
             } else {
                 alert("Erreur: " + data.message);
             }

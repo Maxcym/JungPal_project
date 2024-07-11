@@ -9,7 +9,7 @@ document.getElementById('submitAd').addEventListener('click', function() {
     }
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost/JungPal_project/php/submit.php', true);
+    xhr.open('POST', 'https://elderly-companions.azurewebsites.net/php/submit.php', true);
     xhr.onload = function () {
         if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);

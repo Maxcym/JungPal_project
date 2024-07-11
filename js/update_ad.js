@@ -10,7 +10,7 @@ document.getElementById('unlock').addEventListener('click', function() {
     }
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost/JungPal_project/php/update_ad.php', true);
+    xhr.open('POST', 'https://elderly-companions.azurewebsites.net/php/update_ad.php', true);
     xhr.onload = function () {
         if (xhr.status === 200) {
             try {

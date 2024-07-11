@@ -1,7 +1,7 @@
 // Print the profil information in the profile page
 document.addEventListener("DOMContentLoaded", function() {
 // Retrieving profile information when the page is loaded
-    fetch('http://localhost/JungPal_project/php/profile.php')
+    fetch('https://elderly-companions.azurewebsites.net/php/profile.php')
         .then(response => response.json())
         .then(data => {
             if (data.success) {
