@@ -14,6 +14,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
+// Get all the user data depending on their id
 $user_id = $_SESSION['user_id'];
 
 try {

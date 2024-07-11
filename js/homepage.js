@@ -1,3 +1,4 @@
+// Verify if a user is connected or not
 function checkSession() {
     ajaxRequest("GET", "http://localhost/JungPal_project/php/check_session.php", null, function(response) {
         if (!response.loggedIn) {

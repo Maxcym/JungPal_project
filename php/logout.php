@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-// Détruire toutes les données de session
+// Destroy the data session
 $_SESSION = array();
 
-// Effacer le cookie de session
+// Delete cookies
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(session_name(), '', time() - 42000,
@@ -13,11 +13,11 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-// Détruire la session
+// Destroy the session
 session_unset();
 session_destroy();
 
-// Retourner une réponse JSON pour indiquer que la déconnexion a réussi
+// Send a response for success
 $response = array("success" => true);
 header('Content-Type: application/json');
 echo json_encode($response);

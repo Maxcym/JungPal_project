@@ -1,3 +1,4 @@
+// Print the profil information in the profile page
 document.addEventListener("DOMContentLoaded", function() {
     // Récupération des informations de profil lorsque la page est chargée
     fetch('http://localhost/JungPal_project/php/profile.php')

@@ -2,6 +2,7 @@
 header('Content-Type: application/json');
 include("bdd.php");
 
+// Get all the ads from the database
 try {
     $stmt = $conn->prepare("SELECT * FROM ads");
     $stmt->execute();

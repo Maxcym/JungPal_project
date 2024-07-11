@@ -1,3 +1,4 @@
+// Get the informations from the form to update the ad
 document.getElementById('unlock').addEventListener('click', function() {
     var formData = new FormData(document.getElementById('profileForm'));
     console.log(...formData.entries()); // Print form data to the console for debugging

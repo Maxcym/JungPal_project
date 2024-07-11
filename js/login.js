@@ -1,3 +1,4 @@
+// If the user logs in succesfully, he is redirect to the right page
 document.getElementById("login").addEventListener("click", function(event) {
     event.preventDefault();
 

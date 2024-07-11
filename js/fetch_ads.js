@@ -1,3 +1,4 @@
+// Show all ads
 document.addEventListener("DOMContentLoaded", function() {
     fetch('http://localhost/JungPal_project/php/fetch_ads.php')
         .then(response => response.json())

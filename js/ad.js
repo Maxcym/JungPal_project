@@ -1,6 +1,6 @@
+// get the informations from the form to create an ad 
 document.getElementById('submitAd').addEventListener('click', function() {
     var formData = new FormData(document.getElementById('profileForm'));
-    console.log(...formData.entries()); // Print form data to the console for debugging
 
     if (!formData.has('user_id')) {
         console.error('user_id is missing from form data');
@@ -17,8 +17,6 @@ document.getElementById('submitAd').addEventListener('click', function() {
 
             if (response.success) {
                 document.getElementById('adId').value = response.ad_id;
-                // document.getElementById('submitAd').textContent = 'Update ad';
-                // document.getElementById('deleteAd').style.display = 'block';
             }
         } else {
             alert('An error occurred while submitting your ad.');
