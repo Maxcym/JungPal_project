@@ -26,27 +26,20 @@ The platform incorporates both front-end and back-end technologies to provide a 
 
 **Back-end:** 
 
-- **Database and Server:** the platform uses a local database for data storage. This approach provides direct and personalized management of data, ensuring high performance and security.
-
 - **Technologies:** the back-end is built using PHP and JavaScript. PHP is utilized for server-side scripting, allowing us to handle form submissions, manage sessions, and interact with the database. JavaScript is employed for creating dynamic and interactive features that enhance the user experience.
 
-- **Server:** in the future, a server on AWS will be set up to enhance scalability and reliability.
+## Hosting Details
 
-# Installation and Configuration
+### Google Cloud
 
-**Prerequisites:**
+The database is hosted on Google Cloud, taking advantage of its reliable and scalable infrastructure. This setup ensures that our data is securely stored and efficiently managed, providing high availability and strong disaster recovery capabilities.
 
-- A local server with PHP installed.
-- A database server (e.g., MySQL, PostgreSQL).
+### Microsoft Azure
 
-**Installation:**
+The front-end, PHP, JavaScript, and CSS components are hosted on Microsoft Azure. 
 
-- Clone the project repository.
-- Set up the local database and import the provided SQL file.
-- Configure the database settings in the project's configuration file.
+Link to the website : https://elderly-companions.azurewebsites.net/html/homepage.html 
 
-**Running the Server:**
 
-- Start the local server.
-- Access the platform via the browser using the appropriate URL.
+
 
