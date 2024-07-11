@@ -21,15 +21,15 @@ document.getElementById('unlock').addEventListener('click', function() {
 
             console.log(`User ID: ${userId}`); // Log the retrieved user ID
 
-            // Add user_id to formData
-            formData.append('user_id', userId);
-
             // Check if ad_id is present in formData
             if (!formData.has('ad_id')) {
                 console.error('ad_id is missing from form data');
                 alert('Ad ID is missing from form data.');
                 return;
             }
+
+            // Add user_id to formData
+            formData.append('user_id', userId);
 
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'https://elderly-companions.azurewebsites.net/php/update_ad.php', true);
