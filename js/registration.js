@@ -1,3 +1,4 @@
+// Get the informations from the form to create a new account
 document.getElementById("signup").addEventListener("click", function(event) {
     event.preventDefault();
 

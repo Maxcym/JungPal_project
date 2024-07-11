@@ -24,6 +24,7 @@ if (!$user_id) {
     exit;
 }
 
+// Delete the ad in the database depending on the user who created it
 try {
     $stmt = $conn->prepare("DELETE FROM ads WHERE user_id = ?");
     $stmt->bind_param("i", $user_id);

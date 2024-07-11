@@ -1,3 +1,4 @@
+// Get the informations from the form to update the ad
 document.getElementById('unlock').addEventListener('click', function() {
     var formData = new FormData(document.getElementById('profileForm'));
     console.log(...formData.entries()); // Print form data to the console for debugging
@@ -18,8 +19,6 @@ document.getElementById('unlock').addEventListener('click', function() {
 
                 if (response.success) {
                     document.getElementById('adId').value = response.ad_id;
-                    // document.getElementById('submitAd').textContent = 'Update ad';
-                    // document.getElementById('deleteAd').style.display = 'block';
                 }
             } catch (e) {
                 console.error('Invalid JSON response:', xhr.responseText);

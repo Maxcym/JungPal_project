@@ -1,3 +1,4 @@
+// get the informations of an add from the database to print on the ad's page
 document.addEventListener("DOMContentLoaded", function() {
     fetch('http://localhost/JungPal_project/php/fetch_all_ads.php')
         .then(response => {

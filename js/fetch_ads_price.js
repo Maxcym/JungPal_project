@@ -1,3 +1,4 @@
+// Send the price select in the form to print only the ads under it
 document.addEventListener("DOMContentLoaded", function() {
     const searchButton = document.getElementById('button_search');
     const costInput = document.getElementById('cost');

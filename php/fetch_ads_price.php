@@ -7,6 +7,7 @@ include("bdd.php");
 
 $maxPrice = isset($_GET['maxPrice']) ? (int)$_GET['maxPrice'] : null;
 
+//get all the ads under a certain price
 $query = "SELECT id, rooms, price, size, deposit, internet, campus_time, party, garden, cleaning FROM ads";
 
 if ($maxPrice !== null) {

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             console.log("Logout button clicked");
 
-            // Appeler le script PHP de déconnexion
+            // Call the php script to logout
             ajaxRequest("GET", "http://localhost/JungPal_project/php/logout.php", null, function(response) {
                 console.log("Logout response: ", response);
                 if (response.success) {
@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Redirection vers la page de connexion après la déconnexion
                     window.location.href = "http://localhost/JungPal_project/html/homepage.html";
                 } else {
-                    console.error("Erreur lors de la déconnexion.");
+                    console.error("Error during logout.");
                 }
             });
         });
     } else {
-        console.error("Le bouton de déconnexion avec l'ID 'logout' est introuvable.");
+        console.error("The logout button with ID 'logout' could not be found.");
     }
 });
 
@@ -33,15 +33,15 @@ function ajaxRequest(method, url, data, callback) {
                 let jsonResponse = JSON.parse(xhr.responseText);
                 callback(jsonResponse);
             } catch (e) {
-                alert("Erreur lors du traitement de la réponse : " + e.message);
+                alert("Error while processing the response : " + e.message);
                 console.error("Réponse reçue:", xhr.responseText);
             }
         } else {
-            alert("Erreur de requête: " + xhr.status);
+            alert("Query error: " + xhr.status);
         }
     };
     xhr.onerror = function() {
-        alert("Erreur de connexion au serveur.");
+        alert("Error while connecting to server.");
     };
     if (data) {
         xhr.send(data);

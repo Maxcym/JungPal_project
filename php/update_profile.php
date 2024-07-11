@@ -8,6 +8,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
+// Update the user profile depending on their id
 $user_id = $_SESSION['user_id'];
 
 $name = $_POST['nom'];

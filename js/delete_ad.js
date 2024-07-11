@@ -1,3 +1,4 @@
+//delete the ad from the database
 document.getElementById('deleteAd').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
@@ -23,6 +24,6 @@ document.getElementById('deleteAd').addEventListener('click', function(event) {
         }
     };
 
-    var data = JSON.stringify({ user_id: userId }); // Assuming userId is available in the scope
+    var data = JSON.stringify({ user_id: userId });
     xhr.send(data);
 });

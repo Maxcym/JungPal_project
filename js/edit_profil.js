@@ -1,5 +1,6 @@
+// Get informations from the form to modify user informations in the database
 document.addEventListener("DOMContentLoaded", function() {
-    // Charger les informations de profil lorsque la page est chargée
+    // Print the user informations so they can be changed
     fetch('http://localhost/JungPal_project/php/profile.php')
         .then(response => response.json())
         .then(data => {
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('Erreur de connexion au serveur.');
         });
 
-    // Soumettre les modifications
+    // Send the modifications to the php file
     document.getElementById('modify').addEventListener('click', function(event) {
         event.preventDefault();
         let formData = new FormData(document.getElementById('inscription-form'));

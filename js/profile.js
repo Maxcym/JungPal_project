@@ -1,10 +1,12 @@
+// Print the profil information in the profile page
 document.addEventListener("DOMContentLoaded", function() {
-    // Récupération des informations de profil lorsque la page est chargée
+// Retrieving profile information when the page is loaded
     fetch('http://localhost/JungPal_project/php/profile.php')
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Injecter les données du profil dans le DOM
+                // Injecting profile data into the DOM
+
                 document.getElementById('name').textContent = data.name;
                 document.getElementById('surname').textContent = data.surname;
                 document.getElementById('part').value = data.party || '';
