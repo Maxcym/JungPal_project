@@ -12,6 +12,8 @@ The aim of this project is to create a platform to solve the accommodation probl
 
 - **Communication Tools:** a chatbox will be developed to facilitate communication between students and potential elderly housemates. This chatbox will allow students to find apartments according to their criteria, with an algorithm guiding their search. It will also enable elderly individuals to contact students directly. (Currently in development)
 
+Note: The chatbox is only accessible when the user is logged in.
+
 - **Advertisement Management:** elderly individuals can now create, edit, and delete accommodation listings, making it easier for them to manage their housing offers.
 
 # Technical Overview
