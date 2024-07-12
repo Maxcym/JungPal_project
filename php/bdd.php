@@ -7,10 +7,10 @@
   header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
   // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-  $servername = "DB_HOST";
-  $username = "DB_USERNAME";
-  $password = "DB_PASSWORD";
-  $dbname = "DB_NAME";
+  $servername = getenv('DB_HOST');
+  $username = getenv('DB_USERNAME');
+  $password = getenv('DB_PASSWORD');
+  $dbname = getenv('DB_NAME');
 
   // Création de la connexion
   $conn = new mysqli($servername, $username, $password, $dbname);
