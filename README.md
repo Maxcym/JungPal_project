@@ -6,11 +6,11 @@ The aim of this project is to create a platform to solve the accommodation probl
 
 # Key Features
 
-- **Account Creation and Authentication:** a secure system for account creation and authentication for both students and elderly individuals. This ensures that only verified users can access the platform and benefit from its features.
+- **Account Creation and Authentication:** a system for account creation and authentication for both students and elderly individuals. 
 
 - **Profile Management:** both students and elderly individuals can create and manage detailed profiles.
 
-- **Communication Tools:** a chatbox will be developed to facilitate communication between students and potential elderly housemates. This chatbox will allow students to find apartments according to their criteria, with an algorithm guiding their search. It will also enable elderly individuals to contact students directly.
+- **Communication Tools:** a chatbox will be developed to facilitate communication between students and potential elderly housemates. This chatbox will allow students to find apartments according to their criteria, with an algorithm guiding their search. It will also enable elderly individuals to contact students directly. (Currently in development)
 
 - **Advertisement Management:** elderly individuals can now create, edit, and delete accommodation listings, making it easier for them to manage their housing offers.
 
