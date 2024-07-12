@@ -7,10 +7,10 @@
   header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
   // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-  $servername = "34.155.17.154";
-  $username = "root";
-  $password = "L.h+q2}kUJe#J/Ih";
-  $dbname = "jungpal";
+  $servername = "DB_HOST";
+  $username = "DB_USERNAME";
+  $password = "DB_PASSWORD";
+  $dbname = "DB_NAME";
 
   // Création de la connexion
   $conn = new mysqli($servername, $username, $password, $dbname);
