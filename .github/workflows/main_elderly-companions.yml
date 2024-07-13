@@ -72,4 +72,3 @@ jobs:
           app-name: 'elderly-companions'
           slot-name: 'Production'
           package: .
-          
